@@ -1,0 +1,37 @@
+// Place all the styles related to the Validation controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#result {
+  position: relative;
+  padding-right: 100px;
+  img {
+    right: 15px;
+    top: 19px;
+    position: absolute;
+  }
+}
+
+#result_form {
+  width: 60%;
+  margin: 20px 0;
+  display:inline-block;
+}
+
+
+#revalidate {
+  margin-top: 17px;
+  
+  #delimiter, #quote_char {
+    width: 35px;
+  }
+  
+  .form-group {
+    margin-right: 10px;
+  }
+  
+  label {
+    font-weight: normal;
+    font-weight: 0.8em;
+  }
+}

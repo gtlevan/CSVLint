@@ -1,0 +1,299 @@
+@import 'bootstrap';
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import "main";
+@import "font-awesome";
+@import "colours";
+
+.odi-orange {
+  .page-title, .site-title .status {
+    background-color: $odiOrange;
+  }
+  .caret {
+    border-top-color: $odiOrange;
+    border-bottom-color: $odiOrange;
+  }
+}
+
+h1.site-title {
+  font-size: 32px;
+  margin: 10px 0;
+  position: relative;
+  a {
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .label {
+    position: absolute;
+    font-size: 12px;
+    top: -12px;
+    right: -60px;
+    padding: 5px;
+  }
+}
+
+#badgeModal {
+  .modal-dialog {
+    left: 0;
+  }
+
+  .modal-header {
+    background-color: $odiOrange;
+    color: #fff;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+
+.badge-code {
+  table {
+    width: 100%;
+    border-top: 0;
+    td:first-child {
+      vertical-align: top;
+      padding-right: 10px;
+    }
+    td:nth-child(2) {
+      font-size: 90%;
+      width: 100%;
+      padding-bottom: 10px;
+    }
+    textarea {
+      width: 100%;
+    }
+  }
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+color: #fff;
+background-color: $odiOrange;
+}
+
+
+#wrapper {
+  .nav-tabs a {
+    padding: 10px;
+  }
+
+  p.lead{
+    font-size: 22px;
+    line-height: 31px;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    color: $odiGreyDark;
+  }
+
+  .options {
+    margin: 20px 0 10px;
+    font-weight:normal;
+  }
+  .options-first{
+    margin-top:0;
+  }
+
+  .btn-square-icon{
+    width: 60px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  // info box at base of homepage form
+  .more-information {
+    color: #999;
+    font-size: 14px;
+    margin-top: 16px;
+    line-height: 20px;
+  }
+
+  .col-md-6.primary {
+  background-color: #eee;
+  padding: 10px;
+  }
+
+  .url-group {
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  a.btn-primary, button.btn-primary {
+    @include button-variant(#fff, #1dd3a7, rgba(0,0,0,0.1));
+  }
+  a.btn-lg, button.btn-lg{
+    @include button-size(10px, 30px, 18px, 18px, 6px);
+    border: 0;
+  }
+
+  #schemas{
+    margin-bottom: 20px;
+  }
+
+  .btn-revalidate {
+    background-color: $odiOrange !important;
+    margin-top: 10px;
+  }
+
+  .btn-file {
+      position: relative;
+      overflow: hidden;
+  }
+
+  .btn-file input[type=file] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      text-align: right;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      outline: none;
+      background: white;
+      cursor: inherit;
+      display: block;
+  }
+
+  input.form-control {
+    height: 60px;
+    font-size: 22px;
+  }
+
+    input.form-control.form-control-small {
+    height: 30px;
+    font-size: 16px;
+    width: 35px;
+    }
+
+  .input-group.last {
+    margin-bottom: 40px;
+  }
+
+  .checkbox {
+    margin: 20px 0;
+  }
+
+  .table {
+    .url {
+      max-width: 270px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .result-badge {
+    margin-top: 32px;
+  }
+
+  .panel {
+    h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 0;
+    }
+  }
+
+  table.report-results {
+    font-size: 13px;
+
+    border-top: none;
+
+      td, th {
+        text-align: center;
+        border:none;
+      }
+
+      th {
+        background-color: #fff;
+        .result {
+          font-size: 30px;
+          line-height: 30px;
+          display: block;
+          text-align: center;
+          border-top: none;
+        }
+      }
+
+       .errors, .errors-none {
+          background-color: $alert-danger-bg;
+          color: $odiRed;
+        }
+
+        .warnings, .warnings-none {
+          background-color: $alert-warning-bg;
+          color: $odiYellow;
+        }
+
+        .info_messages, .info_messages-none {
+          background-color: $alert-info-bg;
+          color: $odiBlue;
+        }
+
+        .errors-none, .warnings-none, .info_messages-none {
+          background-color: whitesmoke;
+        }
+
+        td.warnings, td.errors, td.info_messages, td.active{
+          font-size: 22px;
+          font-weight: bold;
+          border: 2px solid #fff;
+        }
+
+        td.name {
+          text-align: right;
+          line-height: 31px;
+
+        }
+
+  }
+
+  .data-title {
+display: block;
+font-weight: bold;
+  }
+}
+
+#validation_url {
+  height: 30px;
+  width: 100%;
+}
+
+.schema-text {
+  overflow: auto;
+  margin-left: -20px;
+  font-size: 0.9em;
+}
+
+.schema-progress-container {
+  margin: 15px 0 5px -15px;
+}
+
+.alternate a.alternate-link {
+  margin: 0 7px;
+  padding: 7px 12px !important;
+  text-transform: uppercase;
+  font-size: 14px !important;
+  background-color: #ff6700 !important;
+}
